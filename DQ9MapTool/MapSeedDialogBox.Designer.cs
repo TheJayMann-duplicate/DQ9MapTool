@@ -328,6 +328,8 @@
             this.levelTextBox.Name = "levelTextBox";
             this.levelTextBox.Size = new System.Drawing.Size(100, 20);
             this.levelTextBox.TabIndex = 5;
+            this.levelTextBox.Text = "1";
+            this.levelTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.levelTextBox_Validating);
             // 
             // searchButton
             // 

@@ -56,6 +56,15 @@ namespace DQ9MapTool {
             confirmButton.Enabled = mapLocationListView.SelectedItems.Count > 0;
         }
 
+        private void levelTextBox_Validating(object sender, CancelEventArgs e) {
+            int level;
+            // Simple level check.  If the textbox does not contain a valid
+            // number, cancel.  If the textbox contains a number less than
+            // 1, cancel.  If the textbox contains a number greater than
+            // 100, cancel.
+            if (!int.TryParse(levelTextBox.Text, out level) || level < 1 || level > 100) e.Cancel = true;
+        }
+
   
 
 
