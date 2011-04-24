@@ -110,7 +110,7 @@ namespace DQ9MapTool {
                 }
                 var rows =
                     Enumerable.Range(7, 3600).Select(sec =>
-                        Random.GetRandom((uint)(mapData.MapSeed + mapLevel + sec - 5))
+                        Random.GetRandom((uint)(mapData.MapSeed + mapLevel + sec - 4))
                               .Take(chestCount)
                               .Select((rnd, index) => Data.GetItem(Data.GetIndex(mapData.GetTreasureBoxRankPerFloor(mapLevel, index) - 1, RandomToPercent(rnd))))
                               .ToArray()
