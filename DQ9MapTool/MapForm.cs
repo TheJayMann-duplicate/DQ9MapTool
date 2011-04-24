@@ -332,7 +332,8 @@ namespace DQ9MapTool {
                 // to zero.  It does not alter the state of the
                 // stopwatch logic.
                 stopwatch.Reset();
-                UpdateStopwatchUI(TimeSpan.Zero);
+                StopwatchDisplayLabel.Text = "00:00:00";
+                //UpdateStopwatchUI(TimeSpan.Zero);
             }
         }
         /// <summary>
