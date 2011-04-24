@@ -222,7 +222,7 @@ namespace DQ9MapTool {
         }
 
         private static string FormatTime(TimeSpan ts) {
-            return string.Format("{0:00}:{1:00}", ts.TotalMinutes, ts.Seconds);
+            return string.Format("{0:00}:{1:00}", Math.Floor(ts.TotalMinutes), ts.Seconds);
         }
 
         private void openToolStripButton_Click(object sender, EventArgs e) {
