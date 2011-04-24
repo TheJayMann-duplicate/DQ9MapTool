@@ -313,7 +313,7 @@ namespace DQ9MapTool {
                     // needs to update the stopwatch display, thus
                     // a flag is set informing the stopwatch to not
                     // continue updating the UI.
-
+                    PlayButton.Enabled = true;
                     timerUpdatesUI = false;
                 } else {
                     // If the timer update flag is not set, then the
