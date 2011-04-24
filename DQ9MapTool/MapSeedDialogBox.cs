@@ -39,6 +39,7 @@ namespace DQ9MapTool {
         }
 
         private void searchButton_Click(object sender, EventArgs e) {
+            mapLocationListView.Clear();
             var resultset = Database.SearchForMap((byte)materialTypeCombo.SelectedValue, (byte)dungeonTypeCombo.SelectedValue, (byte)difficultyTypeCombo.SelectedValue, byte.Parse(levelTextBox.Text));
             foreach (SqlCeUpdatableRecord result in resultset) {
                 var seed = Convert.ToUInt32( result["MapSeed"]);
